@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 19">
+    <title>fit_to_screen-01</title>
+    <rect x="4.45" y="4.45" width="15" height="10"
+          style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+    <polyline points="0.75 5.75 0.75 0.75 5.75 0.75"
+              style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+    <polyline points="23.25 13.25 23.25 18.25 18.25 18.25"
+              style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+    <polyline points="5.75 18.25 0.75 18.25 0.75 13.25"
+              style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+    <polyline points="18.25 0.75 23.25 0.75 23.25 5.75"
+              style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+</svg>

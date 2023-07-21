@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <defs>
+        <style>
+            .gds{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill-rule:evenodd;}
+        </style>
+    </defs><title>science-molecule</title>
+    <circle class="gds" cx="12.009" cy="12.009" r="2.25"/>
+    <ellipse class="gds" cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)"/><ellipse class="gds" cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)"/>
+</svg>

@@ -1,0 +1,6 @@
+data-ingestion-pipeline/fraudTrain.csv
+/public
+**/__pycache__
+*.pyc
+**/*env
+**/.ipynb_checkpoints
