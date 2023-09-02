@@ -6,14 +6,14 @@ default: run
 
 # Define the target to run the Docker Compose file.
 run:
-	docker compose up -d
+	sudo docker compose up  --build -d
 
 # Define additional targets as needed. For example, if you want to stop the containers:
 stop:
-	docker compose down
+	sudo docker compose down
 
 clean:
-	docker compose down -v --remove-orphans
+	sudo docker compose down -v --remove-orphans
 
 # Add more targets and commands as needed based on your requirements.
 # For example, you can add targets for building specific services, cleaning up, etc.

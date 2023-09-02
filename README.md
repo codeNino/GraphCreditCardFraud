@@ -64,7 +64,7 @@ STEP 1: Python and Docker on your PC.
 
 
 
-STEP 1: To Run Database Instance and also View already Loaded Data.
+STEP 2: To Run Database Instance and also View already Loaded Data.
 
   ## Enter the db-server directory to start the neo4j database.
 
@@ -87,7 +87,7 @@ STEP 1: To Run Database Instance and also View already Loaded Data.
     use command `make clean` or `sudo make clean` if root permission is required 
 
 
-STEP 2: To Load Data into Database
+STEP 3: To Load Data into Database
 
   ## Enter the data-ingestion-pipleine
     Store the transactions dataset in the directory:
