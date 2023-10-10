@@ -46,7 +46,7 @@ class CCFraudPipeline:
         unique_customers.drop(columns=[col for col in list(Data.columns) if col not in attr],
                        inplace=True)      # drop irrelevant attributes
         if "first" in unique_customers.columns and "last" in unique_customers.columns:
-            unique_customers["name"] = unique_customers["first"] + " " + unique_customers["last"]     # merge first and last names to create fullname
+            unique_customers["card_holder"] = unique_customers["first"] + " " + unique_customers["last"]     # merge first and last names to create fullname
             unique_customers.drop(columns=["first", "last"], inplace=True) # drop first and last for name
         print("Created Customer Dataframe \n")
         return unique_customers
@@ -181,7 +181,7 @@ class CCFraudPipeline:
                 except:
                     pass
 
-            purchaseDF = self.__makeTransactionDF(["cc_num", "merchant", "is_fraud",
+            purchaseDF = self.__makeTransactionDF(["cc_num", "merchant",
             "trans_date", "trans_time", "trans_num","amt","unix_time"])
             
             # get purchases dataframe in batches of size 10 000
@@ -210,7 +210,7 @@ class CCFraudPipeline:
                     try:
                         relationship = Relationship(customer, relation_type, 
                             merchant, amount=float(row['amt']), date=row["trans_date"], trans_num=row["trans_num"],
-                            time=row["trans_time"], timestamp=row["unix_time"], is_fraud=row["is_fraud"])
+                            time=row["trans_time"], timestamp=row["unix_time"])
                         # Create the relationship in the graph
                         self.__graph.create(relationship)
                     except:
@@ -241,7 +241,7 @@ if __name__ == "__main__":
     pipe = CCFraudPipeline() # intialize pipeline with dataset 
 
     pipe.loadCustomerMerchant({
-        "customer" : [ "first", "last", "cc_num", "gender", "state", "job", "city"],
+        "customer" : [ "first", "last", "cc_num", "gender", "zip", "state", "job", "city"],
         "merchant": ["merchant", "category"]
     }) # load customer and merchant nodes into DB
 

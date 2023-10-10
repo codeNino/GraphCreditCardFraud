@@ -9,6 +9,7 @@ PYTHON_VERSION := 3.8.10
 .PHONY: setup run clean
 
 # Set up the virtual environment and install dependencies
+.PHONY: setup
 setup: $(VENV_NAME)/bin/activate
 $(VENV_NAME)/bin/activate: requirements.txt
 	pip install --upgrade pip
@@ -18,9 +19,11 @@ $(VENV_NAME)/bin/activate: requirements.txt
 	touch $(VENV_NAME)/bin/activate
 
 # Run the Python script using the virtual environment
+.PHONY: run
 run: setup
 	$(VENV_NAME)/bin/python pipeline.py
 
 # Clean up the virtual environment
+.PHONY: clean
 clean:
 	rm -rf $(VENV_NAME)
